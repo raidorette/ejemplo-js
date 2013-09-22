@@ -1,0 +1,62 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Gudea|Kavoon' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/ejemplo3.css">
+	<title>cuenta vocales</title>
+</head>
+
+
+<body>
+	<h1>cuenta vocales</h1>
+	<label for="texto">Ingrese texto</label>
+	<input type="text" id="vocales">
+	<button id="calcula">calcular</button>
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var $vocales = $("#vocales");
+			var contadora = 0;
+			var contadore = 0;
+			var contadori = 0;
+			var contadoro = 0;
+			var contadoru = 0;
+			var contador = 0;
+
+			function contafor () {
+				var conteinput= $vocales.val();
+
+				for (var i = 0; i < conteinput.length; i++) {
+					if (conteinput[i] == "a") {
+						contadora = contadora + 1;
+					} else if (conteinput[i] == "e") {
+						contadore = contadore + 1;
+					} else if (conteinput[i] == "i") {
+						contadori = contadori + 1;
+					} else if ((conteinput[i] == "o") || (conteinput[i] == "ó")) {
+						contadoro = contadoro + 1;
+					} else if (conteinput[i] == "u") {
+						contadoru = contadoru + 1;
+					} else {
+						contador = contador + 1;
+					}
+				}
+
+				alert("total vocal a:" + contadora);
+				alert("total vocal e:" + contadore);
+				alert("total vocal i:" + contadori);
+				alert("total vocal o:" + contadoro);
+				alert("total vocal u:" + contadoru);
+				alert("total no vocal:" + contador);
+			};
+
+			$("#calcula").click(function(){
+				contafor();
+			})
+		});
+	</script>
+
+</body>
+
+</html>
