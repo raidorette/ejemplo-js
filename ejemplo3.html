@@ -11,7 +11,7 @@
 <body>
 	<h1>cuenta vocales</h1>
 	<label for="texto">Ingrese texto</label>
-	<input type="text" id="vocales">
+	<input type="text" id="vocales"><br>
 	<button id="calcula">calcular</button>
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 	<script>
@@ -42,13 +42,13 @@
 						contador = contador + 1;
 					}
 				}
-
-				alert("total vocal a:" + contadora);
-				alert("total vocal e:" + contadore);
-				alert("total vocal i:" + contadori);
-				alert("total vocal o:" + contadoro);
-				alert("total vocal u:" + contadoru);
-				alert("total no vocal:" + contador);
+				var texto = "total vocal a:" + contadora + "\n" +
+					"total vocal e:" + contadore + "\n" +
+					"total vocal i:" + contadori + "\n" +
+					"total vocal o:" + contadoro + "\n" +
+					"total vocal u:" + contadoru;
+				
+				alert(texto);
 			};
 
 			$("#calcula").click(function(){
